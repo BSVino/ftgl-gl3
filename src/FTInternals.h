@@ -69,8 +69,6 @@
 //#include <OpenGLES/ES1/glext.h>
 
 
-#include "FTGL/ftglesGlue.h"
-
 /*
     // Non windows platforms - don't require nonsense as seen above :-)
     #ifndef __gl_h_
@@ -103,6 +101,8 @@
     #endif
  */
 #endif
+
+#include "FTGL/ftglesGlue.h"
 
 FTGL_BEGIN_C_DECLS
 

@@ -5,3 +5,8 @@ stamp-h1
 *.o
 *.lo
 *.la
+
+/msvc/vc10/Debug
+/msvc/vc10/ipch
+/msvc/Build
+/msvc/vc10/Release

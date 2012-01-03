@@ -10,13 +10,25 @@
 #ifndef FTGL_ES_GLUE_H
 #define FTGL_ES_GLUE_H
 
-#include <OpenGLES/ES1/gl.h>
-#include <OpenGLES/ES1/glext.h>
+#ifdef WIN32
+
+    // Under windows avoid including <windows.h> is overrated.
+    // Sure, it can be avoided and "name space pollution" can be
+    // avoided, but why? It really doesn't make that much difference
+    // these days.
+    #define  WIN32_LEAN_AND_MEAN
+    #include <windows.h>
+
+    #ifndef __gl_h_
+        #include <GL/gl.h>
+        #include <GL/glu.h>
+    #endif
+
+#endif
+#define GL_CLAMP_TO_EDGE                  0x812F
 
 #include <stdio.h>
 #include <assert.h>
-
-#define GL_QUADS 888
 
 #ifdef __cplusplus
 extern "C" {
