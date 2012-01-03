@@ -27,7 +27,7 @@
 #ifndef     __FTVectoriser__
 #define     __FTVectoriser__
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 #include "FTContour.h"
 #include "FTList.h"

@@ -28,7 +28,7 @@
 
 #include <string>
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 #include "FTInternals.h"
 #include "FTBitmapGlyphImpl.h"

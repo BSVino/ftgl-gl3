@@ -30,7 +30,7 @@
 #include FT_FREETYPE_H
 //#include FT_CACHE_H
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 
 /**

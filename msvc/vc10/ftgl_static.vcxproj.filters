@@ -104,7 +104,7 @@
     <ClCompile Include="..\..\src\FTLayout\FTSimpleLayout.cpp">
       <Filter>Source Files\FTLayout</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\FTGL\ftglesGlue.cpp">
+    <ClCompile Include="..\..\src\FTGL\gl3Glue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

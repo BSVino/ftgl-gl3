@@ -1,14 +1,13 @@
 /*
- *  ftOpenGLES.h
- *  iPhonefonts
+ *  gl3Glue.h
  *
  *  Created by david on 5/11/09.
  *  Copyright 2009 n/a. All rights reserved.
  *
  */
 
-#ifndef FTGL_ES_GLUE_H
-#define FTGL_ES_GLUE_H
+#ifndef FTGL_GL3_GLUE_H
+#define FTGL_GL3_GLUE_H
 
 #ifdef WIN32
 

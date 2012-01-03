@@ -27,7 +27,7 @@
 
 #include <wchar.h>
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 #include "FTInternals.h"
 #include "FTBufferFontImpl.h"

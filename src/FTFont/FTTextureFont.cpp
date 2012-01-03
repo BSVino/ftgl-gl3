@@ -29,7 +29,7 @@
 #include <cassert>
 #include <string> // For memset
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 #include "FTInternals.h"
 

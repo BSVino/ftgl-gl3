@@ -79,7 +79,7 @@
     <ClCompile Include="..\..\src\FTContour.cpp" />
     <ClCompile Include="..\..\src\FTFace.cpp" />
     <ClCompile Include="..\..\src\FTGlyphContainer.cpp" />
-    <ClCompile Include="..\..\src\FTGL\ftglesGlue.cpp" />
+    <ClCompile Include="..\..\src\FTGL\gl3Glue.cpp" />
     <ClCompile Include="..\..\src\FTLibrary.cpp" />
     <ClCompile Include="..\..\src\FTPoint.cpp" />
     <ClCompile Include="..\..\src\FTSize.cpp" />

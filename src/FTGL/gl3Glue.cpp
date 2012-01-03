@@ -1,13 +1,12 @@
 /*
- *  ftglesGlue.cpp
- *  iPhonefonts
+ *  gl3Glue.cpp
  *
  *  Created by david on 5/11/09.
  *  Copyright 2009 n/a. All rights reserved.
  *
  */
 
-#include "ftglesGlue.h"
+#include "gl3Glue.h"
 
 struct Vertex 
 {

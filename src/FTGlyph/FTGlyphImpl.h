@@ -27,7 +27,7 @@
 #ifndef __FTGlyphImpl__
 #define __FTGlyphImpl__
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 class FTGlyphImpl
 {

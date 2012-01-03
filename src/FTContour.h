@@ -28,7 +28,7 @@
 #ifndef     __FTContour__
 #define     __FTContour__
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 #include "FTVector.h"
 

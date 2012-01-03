@@ -27,7 +27,7 @@
 #ifndef __FTFontImpl__
 #define __FTFontImpl__
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 #include "FTFace.h"
 

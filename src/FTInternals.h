@@ -28,7 +28,7 @@
 #ifndef __FTINTERNALS_H__
 #define __FTINTERNALS_H__
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -102,7 +102,7 @@
  */
 #endif
 
-#include "FTGL/ftglesGlue.h"
+#include "FTGL/gl3Glue.h"
 
 FTGL_BEGIN_C_DECLS
 

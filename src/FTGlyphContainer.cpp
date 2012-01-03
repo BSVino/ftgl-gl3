@@ -26,7 +26,7 @@
 
 #include "config.h"
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 #include "FTGlyphContainer.h"
 #include "FTFace.h"

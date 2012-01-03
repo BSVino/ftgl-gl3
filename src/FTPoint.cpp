@@ -28,7 +28,7 @@
 
 #include <math.h>
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 bool operator == (const FTPoint &a, const FTPoint &b)
 {

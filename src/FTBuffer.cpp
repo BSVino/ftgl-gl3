@@ -25,7 +25,7 @@
 
 #include "config.h"
 
-#include "FTGL/ftgles.h"
+#include "FTGL/ftgl.h"
 
 
 FTBuffer::FTBuffer()
