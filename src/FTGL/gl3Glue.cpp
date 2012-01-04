@@ -24,32 +24,13 @@ short quad_indexes[MAX_VERTS * 3 / 2 ];
 int curr_vertex;
 GLenum curr_prim;
 bool initted = false;
+int iPositionLocation;
+int iTexCoordLocation;
 
-void ftglInitImmediateModeGL() 
+void ftglSetAttributeLocations(int iPosition, int iTexCoord)
 {
-	glVertexPointer(3, GL_FLOAT, sizeof( Vertex ), immediate[ 0 ].xyz );
-	glTexCoordPointer(2, GL_FLOAT, sizeof( Vertex ), immediate[ 0 ].st );
-	//glColorPointer(4, GL_UNSIGNED_BYTE, sizeof( Vertex ), immediate[ 0 ].c );
-
-        glEnableClientState( GL_VERTEX_ARRAY );
-        glEnableClientState( GL_TEXTURE_COORD_ARRAY );
-        
-	if (initted == false)
-	{
-		for ( int i = 0; i < MAX_VERTS * 3 / 2; i+=6 ) {
-			int q = i / 6 * 4;
-			quad_indexes[ i + 0 ] = q + 0;
-			quad_indexes[ i + 1 ] = q + 1;
-			quad_indexes[ i + 2 ] = q + 2;
-			
-			quad_indexes[ i + 3 ] = q + 0;
-			quad_indexes[ i + 4 ] = q + 2;
-			quad_indexes[ i + 5 ] = q + 3;
-		}
-		
-		//glEnableClientState( GL_COLOR_ARRAY );
-		initted = true;
-	}
+	iPositionLocation = iPosition;
+	iTexCoordLocation = iTexCoord;
 }
 
 
@@ -82,24 +63,6 @@ void ftglVertex2f( float x, float y )
 }
 
 
-void ftglColor4ub( GLubyte r, GLubyte g, GLubyte b, GLubyte a ) 
-{
-	vab.c[ 0 ] = r;
-	vab.c[ 1 ] = g;
-	vab.c[ 2 ] = b;
-	vab.c[ 3 ] = a;
-}
-
-
-void ftglColor4f( GLfloat r, GLfloat g, GLfloat b, GLfloat a ) 
-{
-	vab.c[ 0 ] = (GLubyte) ( r * 255 );
-	vab.c[ 1 ] = (GLubyte) ( g * 255 );
-	vab.c[ 2 ] = (GLubyte) ( b * 255 );
-	vab.c[ 3 ] = (GLubyte) ( a * 255 );
-}
-
-
 void ftglTexCoord2f( GLfloat s, GLfloat t ) 
 {
 	vab.st[ 0 ] = s;
@@ -114,15 +77,26 @@ void ftglEnd()
 		curr_prim = 0;
 		return;
 	}
-	
-	if ( curr_prim == GL_QUADS ) 
+
+	if (iPositionLocation >= 0)
 	{
-		glDrawElements( GL_TRIANGLES, curr_vertex / 4 * 6, GL_UNSIGNED_SHORT, quad_indexes );
-	} 
-	else 
-	{
-		glDrawArrays( curr_prim, 0, curr_vertex );
+		glEnableVertexAttribArray(iPositionLocation);
+		glVertexAttribPointer(iPositionLocation, 3, GL_FLOAT, false, sizeof( Vertex ), immediate[ 0 ].xyz);
 	}
+
+	if (iTexCoordLocation >= 0)
+	{
+		glEnableVertexAttribArray(iTexCoordLocation);
+		glVertexAttribPointer(iTexCoordLocation, 2, GL_FLOAT, false, sizeof( Vertex ), immediate[ 0 ].st);
+	}
+
+	glDrawArrays( curr_prim, 0, curr_vertex );
+
+	if (iPositionLocation >= 0)
+		glDisableVertexAttribArray(iPositionLocation);
+	if (iTexCoordLocation >= 0)
+		glDisableVertexAttribArray(iTexCoordLocation);
+
 	curr_vertex = 0;
 	curr_prim = 0;
 }

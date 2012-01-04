@@ -135,4 +135,7 @@ namespace FTGL
 #include "FTLayout.h"
 #include "FTSimpleLayout.h"
 
+// A hack for GL3 support.
+void ftglSetAttributeLocations(int iPosition, int iTexCoord);
+
 #endif  //  __ftgl__

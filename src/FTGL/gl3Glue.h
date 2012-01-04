@@ -9,22 +9,7 @@
 #ifndef FTGL_GL3_GLUE_H
 #define FTGL_GL3_GLUE_H
 
-#ifdef WIN32
-
-    // Under windows avoid including <windows.h> is overrated.
-    // Sure, it can be avoided and "name space pollution" can be
-    // avoided, but why? It really doesn't make that much difference
-    // these days.
-    #define  WIN32_LEAN_AND_MEAN
-    #include <windows.h>
-
-    #ifndef __gl_h_
-        #include <GL/gl.h>
-        #include <GL/glu.h>
-    #endif
-
-#endif
-#define GL_CLAMP_TO_EDGE                  0x812F
+#include "GL/glew.h"
 
 #include <stdio.h>
 #include <assert.h>
@@ -33,16 +18,12 @@
 extern "C" {
 #endif
 	
-	extern void ftglInitImmediateModeGL();
-	
 	extern void ftglBegin( GLenum prim );
 	
 	extern void ftglVertex3f( float x, float y, float z );
 	
 	extern void ftglVertex2f( float x, float y);
 	
-	extern void ftglColor4f( GLfloat r, GLfloat g, GLfloat b, GLfloat a );
-		
 	extern void ftglTexCoord2f( GLfloat s, GLfloat t );
 	
 	extern void ftglEnd();

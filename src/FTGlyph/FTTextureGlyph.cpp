@@ -124,7 +124,6 @@ const FTPoint& FTTextureGlyphImpl::RenderImpl(const FTPoint& pen,
                                               int renderMode)
 {
     float dx, dy;
-	GLfloat colors[4];
 	
     if(activeTextureID != glTextureID)
     {
@@ -135,27 +134,20 @@ const FTPoint& FTTextureGlyphImpl::RenderImpl(const FTPoint& pen,
     dx = floor(pen.Xf() + corner.Xf());
     dy = floor(pen.Yf() + corner.Yf());
 
-
-	glGetFloatv(GL_CURRENT_COLOR, colors);
-	
     ftglBegin(GL_QUADS);
-	
-    //ftglColor4f(colors[0], colors[1], colors[2], colors[3]);
-	
-	ftglTexCoord2f(uv[0].Xf(), uv[0].Yf());
-	ftglVertex2f(dx, dy);
-	
-	ftglTexCoord2f(uv[0].Xf(), uv[1].Yf());
-	ftglVertex2f(dx, dy - destHeight);
-	
-	ftglTexCoord2f(uv[1].Xf(), uv[1].Yf());
-	ftglVertex2f(dx + destWidth, dy - destHeight);
-	
-	ftglTexCoord2f(uv[1].Xf(), uv[0].Yf());
-	ftglVertex2f(dx + destWidth, dy);
-	
+		ftglTexCoord2f(uv[0].Xf(), uv[0].Yf());
+		ftglVertex2f(dx, dy);
+
+		ftglTexCoord2f(uv[0].Xf(), uv[1].Yf());
+		ftglVertex2f(dx, dy - destHeight);
+
+		ftglTexCoord2f(uv[1].Xf(), uv[1].Yf());
+		ftglVertex2f(dx + destWidth, dy - destHeight);
+
+		ftglTexCoord2f(uv[1].Xf(), uv[0].Yf());
+		ftglVertex2f(dx + destWidth, dy);
     ftglEnd();
-	
+
     return advance;
 }
 
