@@ -134,7 +134,7 @@ const FTPoint& FTTextureGlyphImpl::RenderImpl(const FTPoint& pen,
     dx = floor(pen.Xf() + corner.Xf());
     dy = floor(pen.Yf() + corner.Yf());
 
-    ftglBegin(GL_QUADS);
+    ftglBegin(GL_TRIANGLE_FAN);
 		ftglTexCoord2f(uv[0].Xf(), uv[0].Yf());
 		ftglVertex2f(dx, dy);
 

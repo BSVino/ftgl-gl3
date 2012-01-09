@@ -118,12 +118,6 @@ void ftglError(const char* source)
 		case GL_INVALID_OPERATION:
 			printf("GL Error (%d): GL_INVALID_OPERATION. %s\n\n", error, source);
 			break;
-		case GL_STACK_OVERFLOW:
-			printf("GL Error (%d): GL_STACK_OVERFLOW. %s\n\n", error, source);
-			break;
-		case GL_STACK_UNDERFLOW:
-			printf("GL Error (%d): GL_STACK_UNDERFLOW. %s\n\n", error, source);
-			break;
 		case GL_OUT_OF_MEMORY:
 			printf("GL Error (%d): GL_OUT_OF_MEMORY. %s\n\n", error, source);
 			break;

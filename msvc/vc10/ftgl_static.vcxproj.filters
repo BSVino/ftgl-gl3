@@ -59,37 +59,19 @@
     <ClCompile Include="..\..\src\FTVectoriser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\FTFont\FTBitmapFont.cpp">
-      <Filter>Source Files\FTFont</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\FTFont\FTBufferFont.cpp">
-      <Filter>Source Files\FTFont</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\FTFont\FTFont.cpp">
       <Filter>Source Files\FTFont</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\FTFont\FTFontGlue.cpp">
       <Filter>Source Files\FTFont</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\FTFont\FTOutlineFont.cpp">
-      <Filter>Source Files\FTFont</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\FTFont\FTTextureFont.cpp">
       <Filter>Source Files\FTFont</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\FTGlyph\FTBitmapGlyph.cpp">
-      <Filter>Source Files\FTGlyph</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\FTGlyph\FTBufferGlyph.cpp">
-      <Filter>Source Files\FTGlyph</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\FTGlyph\FTGlyph.cpp">
       <Filter>Source Files\FTGlyph</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\FTGlyph\FTGlyphGlue.cpp">
-      <Filter>Source Files\FTGlyph</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\FTGlyph\FTOutlineGlyph.cpp">
       <Filter>Source Files\FTGlyph</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\FTGlyph\FTTextureGlyph.cpp">

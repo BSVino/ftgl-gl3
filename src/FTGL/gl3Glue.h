@@ -9,7 +9,7 @@
 #ifndef FTGL_GL3_GLUE_H
 #define FTGL_GL3_GLUE_H
 
-#include "GL/glew.h"
+#include "GL3/gl3w.h"
 
 #include <stdio.h>
 #include <assert.h>
