@@ -28,6 +28,20 @@ set(FTGL_GL3_SOURCES
     FTVectoriser.cpp
     FTVectoriser.h
     FTUnicode.h
+
+    FTGL/gl3Glue.cpp
+
+    FTFont/FTFont.cpp
+    FTFont/FTFontGlue.cpp
+    FTFont/FTTextureFont.cpp
+
+    FTGlyph/FTGlyph.cpp
+    FTGlyph/FTGlyphGlue.cpp
+    FTGlyph/FTTextureGlyph.cpp
+
+    FTLayout/FTLayout.cpp
+    FTLayout/FTLayoutGlue.cpp
+    FTLayout/FTSimpleLayout.cpp
 )
 
 add_library(ftgl-gl3 STATIC ${FTGL_GL3_SOURCES})

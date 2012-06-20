@@ -31,11 +31,6 @@
 
 #include "FTFontImpl.h"
 
-#include "FTBitmapFontImpl.h"
-#include "FTExtrudeFontImpl.h"
-#include "FTOutlineFontImpl.h"
-#include "FTPixmapFontImpl.h"
-#include "FTPolygonFontImpl.h"
 #include "FTTextureFontImpl.h"
 
 #include "FTGlyphContainer.h"
