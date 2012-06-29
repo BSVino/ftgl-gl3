@@ -1,8 +1,9 @@
 Note: This is a special version FTGL. It was ported to OpenGLES by David Petrie and
 bugfixed and put together with the original autoconf build system by James Long.
 
-Then it was (poorly) ported to OpenGL 3.0 by Jorge Rodriguez. So far only Windows is
-supported and it still has some build issues, but Linux/Mac porting should not be difficult.
+Then it was (poorly) ported to OpenGL 3.0 by Jorge Rodriguez. So far Windows and
+Linux are supported, but Mac porting should not be difficult. If you have problems
+contact Jorge Rodriguez <jorge@lunarworkshop.com>
 
 ===========
 
@@ -22,18 +23,12 @@ FTGL uses the Freetype (www.freetype.org) font library to open and 'decode'
 the fonts. It then takes that output and stores it in a format most efficient
 for OpenGL rendering.
 
-Rendering modes supported are:
-- Bit maps
-- Antialiased Pix maps
-- Outlines
-- Polygon meshes
-- Extruded polygon meshes
-- Texture maps
-- Buffer maps
+FTGL used to support many different rendering modes, but these days most of those
+are obsolete. The only mode which survives in FTGL for GL3 is texture map mode.
 
 USAGE:
 
-	FTGLPixmapFont font("Arial.ttf");
+	FTTextureFont font("Arial.ttf");
 	font.FaceSize(72);
 	font.Render("Hello World!");
 
