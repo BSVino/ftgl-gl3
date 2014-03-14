@@ -1,3 +1,5 @@
+add_definitions(-DFTGL_LIBRARY_STATIC)
+
 find_package(Freetype REQUIRED)
 
 include_directories(${FTGL_GL3_SOURCE_DIR}/src

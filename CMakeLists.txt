@@ -5,7 +5,7 @@ cmake_policy(VERSION 2.4)
 
 find_package(OpenGL REQUIRED)
 
-option(GL3W_INCLUDE_DIR "Location of gl3w" "/usr/local/include")
+set(GL3W_INCLUDE_DIR "Location of gl3w" CACHE STRING "/usr/local/include")
 
 add_subdirectory(src)
 
