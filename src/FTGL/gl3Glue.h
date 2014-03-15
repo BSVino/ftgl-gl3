@@ -9,7 +9,11 @@
 #ifndef FTGL_GL3_GLUE_H
 #define FTGL_GL3_GLUE_H
 
+#ifdef __ANDROID__
+#include <GLES3/gl3.h>
+#else
 #include "GL3/gl3w.h"
+#endif
 
 #include <stdio.h>
 #include <assert.h>

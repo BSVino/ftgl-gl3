@@ -48,7 +48,7 @@ FTGL_BEGIN_C_DECLS
         ftgl->type = cxxtype; \
         return ftgl; \
     }
-
+/*
 // FTBitmapFont::FTBitmapFont();
 C_TOR(ftglCreateBitmapFont, (const char *fontname),
       FTBitmapFont, (fontname), FONT_BITMAP);
@@ -56,7 +56,7 @@ C_TOR(ftglCreateBitmapFont, (const char *fontname),
 // FTBufferFont::FTBufferFont();
 C_TOR(ftglCreateBufferFont, (const char *fontname),
       FTBufferFont, (fontname), FONT_BUFFER);
-/*
+
 // FTExtrudeFont::FTExtrudeFont();
 C_TOR(ftglCreateExtrudeFont, (const char *fontname),
       FTExtrudeFont, (fontname), FONT_EXTRUDE);

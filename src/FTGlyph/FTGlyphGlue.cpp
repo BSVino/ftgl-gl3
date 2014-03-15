@@ -50,6 +50,7 @@ FTGL_BEGIN_C_DECLS
         return ftgl; \
     }
 
+/*
 // FTBitmapGlyph::FTBitmapGlyph();
 C_TOR(ftglCreateBitmapGlyph, (FT_GlyphSlot glyph),
       FTBitmapGlyph, (glyph), GLYPH_BITMAP);
@@ -58,7 +59,6 @@ C_TOR(ftglCreateBitmapGlyph, (FT_GlyphSlot glyph),
 // FIXME: not implemented
 
 
-/*
 // FTExtrudeGlyph::FTExtrudeGlyph();
 C_TOR(ftglCreateExtrudeGlyph, (FT_GlyphSlot glyph, float depth,
                    float frontOutset, float backOutset, int useDisplayList),
